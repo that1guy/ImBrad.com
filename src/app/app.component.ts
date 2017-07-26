@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
       'position': 'fixed',
       'width': '100%',
       'height': '100%',
-      'z-index': 999,
+      'z-index': -2,
       'top': 0,
       'left': 0,
       'right': 0,

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MnFullpageModule } from 'ngx-fullpage';
 import { ParticlesModule } from 'angular-particle';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,8 @@ import { ParticlesModule } from 'angular-particle';
   imports: [
     BrowserModule,
     MnFullpageModule.forRoot(),
-    ParticlesModule
+    ParticlesModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
