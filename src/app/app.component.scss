@@ -21,13 +21,18 @@
   z-index: -1;
 }
 
+#particles{
+  z-index: 0 !important;
+}
+
 .section-flex{
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .greeting {
-    color: white;
+  article {
+    padding-left: 33%;
+    padding-right: 33%;
   }
 }
 

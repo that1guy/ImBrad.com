@@ -1,3 +1,4 @@
+import { MnFullpageService } from 'ngx-fullpage';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
 
   title = 'ImBrad.com';
@@ -14,7 +16,7 @@ export class AppComponent implements OnInit {
       'position': 'fixed',
       'width': '100%',
       'height': '100%',
-      'z-index': -2,
+      'z-index': 1,
       'top': 0,
       'left': 0,
       'right': 0,
@@ -134,6 +136,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
+    // alert("Whaaa");
+    // this.fullpageService.reBuild();
+    // this.fullpageService.silentMoveTo(3);
+
+  }
+
+  constructor(public fullpageService: MnFullpageService) {
   }
 
 }
