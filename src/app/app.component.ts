@@ -1,5 +1,6 @@
 import { MnFullpageService } from 'ngx-fullpage';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent {
 
   title = 'ImBrad.com';
 
+
+  // Particle.js Settings
   particles: object = {
     style: {
       'position': 'fixed',
@@ -134,15 +137,63 @@ export class AppComponent implements OnInit {
     height: 100
   };
 
-  ngOnInit() {
 
-    // alert("Whaaa");
-    // this.fullpageService.reBuild();
-    // this.fullpageService.silentMoveTo(3);
+  //Fullpage.js section binding.
+  visible: {
+    hello: string,
+    work: string,
+    folio: string,
+    contact: string
+  } = {
+    hello: null,
+    work: null,
+    folio: null,
+    contact: null
+  };
 
-  }
+  //Called after fullpage.js completes transition
+  //Toggles viewable class to correct html elements to reveal text with animation.
+  after_load = (anchorLink, index) => {
 
-  constructor(public fullpageService: MnFullpageService) {
-  }
+    for(let key in this.visible) {
+      this.visible[key] = null;
+    }
+
+    this.visible[anchorLink] = "viewable"
+  };
+
+
+  //Navigation menu binding
+  nav: {
+    open: string,
+  } = {
+    open: null
+  };
+
+  //Toggles navigation object binding to show/hide navigation
+  nav_open = () => {
+    if(this.nav.open === "open"){
+      this.nav.open = null;
+    } else {
+      this.nav.open = "open";
+    }
+  };
+
+
+
+  // constructor(public fullpageService: MnFullpageService) {
+  //
+  // }
+
+  // ngOnInit() {
+  //   alert("okay");
+  // }
+
+
+  // @Output() public options: MnFullpageOptions = new MnFullpageOptions({
+  //   afterSlideLoad: function(){
+  //     console.log("Nice");
+  //   }
+  // });
 
 }

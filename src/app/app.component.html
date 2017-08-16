@@ -1,63 +1,70 @@
+<!--Background-->
 <div id="bg"></div>
 <div id="bg-mask"></div>
 
+<!--Navigation-->
+<nav>
+  <div id="nav-menu" [className]="nav.open">
+    <ul>
+      <li data-menuanchor="hello" class="active">
+        <a href="#hello" (click)="nav_open();"><span>hello</span></a>
+      </li>
+      <li data-menuanchor="work" class="">
+        <a href="#work" (click)="nav_open();"><span>work</span></a>
+      </li>
+      <li data-menuanchor="folio" class="">
+        <a href="#folio" (click)="nav_open();"><span>folio</span></a>
+      </li>
+      <li data-menuanchor="contact" class="">
+        <a href="#contact" (click)="nav_open();"><span>contact</span></a>
+      </li>
+    </ul>
+  </div>
+  <div id="nav-mask" [className]="nav.open"></div>
+  <a id="nav-toggle" class="visible" (click)="nav_open();"><span></span></a>
+</nav>
+
+
+<!--Particles.js-->
 <div id="particles">
   <particles [style]="particles.style" [width]="particles.width" [height]="particles.height" [params]="particles.params"></particles>
 </div>
 
+
+<!--Fullpage.js-->
 <div mnFullpage
      [mnFullpageNavigation]="true"
+     [mnFullpageAfterLoad]="after_load"
      [mnFullpageKeyboardScrolling]="true"
      [mnFullpageSlidesNavigation]="true"
      [mnFullpageControlArrows]="false"
-     mnFullpageSlidesNavPosition="bottom"
->
+     mnFullpageSlidesNavPosition="bottom">
 
 
-  <div class="section fp-section fp-table" data-menuanchor="hello">
-    <div class="fp-tableCell section-flex">
+  <!--Landing page-->
+  <div class="section fp-section fp-table" data-anchor="hello">
+    <div id="hello-page" class="fp-tableCell section-flex">
 
-        <article>
+      <section>
+        <article [className]="visible.hello">
           <h6>
             Hello_
           </h6>
+        </article>
 
+        <article [className]="visible.hello">
           <h2>
-            My name is Brad Davis, I'm a technical product manager and software engineer.  My passion is working with dedicated team of engineers to streamline complex problems in an exciting industry.
+            My name is Brad Davis, I'm a technical product manager and software engineer.  My passion is working with teams of developers, designers, and subject matter experts to create products that streamline complex industries.
           </h2>
+        </article>
 
+        <article [className]="visible.hello">
           <h4>
-            I live in San Francisco and have fun working for MyPropertyOffice.com where I have the pleasure of building a state of the art technology for the real estate industry.
+            I live in San Francisco and have fun working at <a href="https://mpoapp.com/search/list" target="_blank">MyPropertyOffice.com</a> where I have the pleasure of building innovative technology for the real estate industry.  You can download my <a href="resume" target="_blank">resume</a> if you'd like to.
           </h4>
         </article>
 
-    </div>
-  </div>
-
-
-
-
-
-  <div class="section fp-section fp-table" data-menuanchor="work">
-    <div class="fp-tableCell section-flex">
-
-      <article>
-        <h6>
-          Work_
-        </h6>
-
-        <h2>
-          During my 14 years working at Apple Inc., Genentech, and launching my own startups I've cut my teeth on a diverse range of programming, starting from Python, through Java, PHP and ending on JavaScript.
-        </h2>
-
-        <h4>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        </h4>
-
-        <button (click)="fullpageService.moveSectionUp();">Move section up</button>
-      </article>
+      </section>
 
     </div>
   </div>
@@ -65,21 +72,47 @@
 
 
 
+  <!--Work Page-->
+  <div class="section fp-section fp-table" data-anchor="work">
+    <div id="work-page" class="fp-tableCell section-flex">
 
-  <div class="section fp-section fp-table" data-menuanchor="portfolio">
-    <div class="fp-tableCell section-flex">
+      <section>
+        <article [className]="visible.work">
+          <h6>
+            Work_
+          </h6>
+        </article>
 
-      <article>
+        <article [className]="visible.work">
+          <h2>
+            During my 14 years in Silicon Valley I've become a master of many things including team management, full-stack JavaScript development, product vision, go-to-market strategies, and technical deployments.
+          </h2>
+        </article>
+
+        <article [className]="visible.work">
+          <h4>
+            My career started right out of high school as an IT Administrator, then "Apple Genius" trainer, then Google Apps Deployment Engineer, then Solutions Architect Consultant, and finally a startup founder.
+          </h4>
+        </article>
+
+        <!--<button (click)="fullpageService.moveSectionUp();">Move section up</button>-->
+      </section>
+
+    </div>
+  </div>
+
+
+
+
+  <!--Portfoio Page-->
+  <div class="section fp-section fp-table" data-anchor="folio">
+    <div id="folio-page" class="fp-tableCell section-flex">
+
+      <section>
 
         <h6>
           Porfolio_
         </h6>
-
-        <div class="slide">
-          <h4>
-            HashtagSell.com
-          </h4>
-        </div>
 
 
         <div class="slide">
@@ -91,25 +124,32 @@
 
         <div class="slide">
           <h4>
-            RouteDesigner.com
+            HashtagSell.com
           </h4>
         </div>
 
 
         <div class="slide">
           <h4>
-            gOptimize.com
+            AM RouteDesigner (SoCal Gas)
           </h4>
         </div>
 
 
         <div class="slide">
           <h4>
-            ClusterBoxConsulting.com
+            gOptimize (Genentech)
           </h4>
         </div>
 
-      </article>
+
+        <div class="slide">
+          <h4>
+            ClusterBoxConsulting (Side Project)
+          </h4>
+        </div>
+
+      </section>
 
     </div>
   </div>
@@ -117,33 +157,39 @@
 
 
 
+  <!--Contact Page-->
+  <div class="section fp-section fp-table" data-anchor="contact">
+    <div id="contact-page" class="fp-tableCell section-flex">
 
-  <div class="section fp-section fp-table" data-menuanchor="contact">
-    <div class="fp-tableCell section-flex">
+      <section>
+        <article [className]="visible.contact">
+          <h6>
+            Contact_
+          </h6>
+        </article>
 
-      <article>
-        <h6>
-          Contact_
-        </h6>
+        <article [className]="visible.contact">
+          <h2>
+            In case you have a project you'd like me to get involved in, or a job opportunity you think I'd be a good fit for - Drop me a line.
+            I'm usually working Monday - Friday.  So just send me a good ol' fashioned e-mail.
+          </h2>
+        </article>
 
-        <h2>
-          In case you have a project you'd like me to get involved in, or a job opportunity you think I'd be a good fit for - Drop me a line.
-          I'm usually working Monday - Friday.  So just send me a good ol' fashioned e-mail.
-        </h2>
+        <article [className]="visible.contact">
+          <h4>
+            <a href="https://www.linkedin.com/in/bradrobertdavis/" target="_blank">LinkedIn</a>
+          </h4>
+        </article>
 
-        <h4>
-          LinkedIn
-        </h4>
-
-        <h4>
-          Email
-        </h4>
-      </article>
-
+        <article [className]="visible.contact">
+          <h4>
+            <a href="mailto:bradrobertdavis@gmail.com" target="_top">e-mail: bradrobertdavis@gmail.com</a>
+          </h4>
+        </article>
+      </section>
 
     </div>
   </div>
-
 
 
 </div>
