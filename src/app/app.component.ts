@@ -14,7 +14,128 @@ export class AppComponent {
 
 
   // Particle.js Settings
-  particles: object = {
+  particles: {
+    style: {
+      'position': string,
+      'width': string,
+      'height': string,
+      'z-index': number,
+      'top': number,
+      'left': number,
+      'right': number,
+      'bottom': number,
+    },
+    params: {
+      interactivity: {
+        detect_on: string,
+        events: {
+          onhover: {
+            enable: boolean,
+            mode: string
+          },
+          onclick: {
+            enable: boolean,
+            mode: string
+          },
+          resize: boolean
+        },
+        modes: {
+          grab: {
+            distance: number,
+            line_linked: {
+              opacity: number
+            }
+          },
+          bubble: {
+            distance: number,
+            size: number,
+            duration: number,
+            opacity: number,
+            speed: number
+          },
+          repulse: {
+            distance: number
+          },
+          push: {
+            particles_nb: number
+          },
+          remove: {
+            particles_nb: number
+          }
+        }
+      },
+      particles: {
+        number: {
+          value: number,
+          density: {
+            enable: boolean,
+            value_area: number
+          }
+        },
+        color: {
+          value: string
+        },
+        shape: {
+          type: string,
+          stroke: {
+            width: number,
+            color: string
+          },
+          polygon: {
+            nb_sides: number
+          },
+          image: {
+            src: string,
+            width: number,
+            height: number
+          }
+        },
+        size: {
+          value: number,
+          random: boolean,
+          anim: {
+            enable: boolean,
+            speed: number,
+            size_min: number,
+            sync: boolean
+          }
+        },
+        opacity: {
+          value: number,
+          random: boolean,
+          anim: {
+            enable: boolean,
+            speed: number,
+            opacity_min: number,
+            sync: boolean
+          }
+        },
+        line_linked: {
+          enable: boolean,
+          distance: number,
+          color: string,
+          opacity: number,
+          width: number
+        },
+        move: {
+          enable: boolean,
+          speed: number,
+          direction: string,
+          random: boolean,
+          straight: boolean,
+          out_mode: string,
+          attract: {
+            enable: boolean,
+            rotateX: number,
+            rotateY: number
+          }
+        }
+      },
+      retina_detect: boolean
+    },
+    width: number,
+    height: number
+  } = {
     style: {
       'position': 'fixed',
       'width': '100%',
