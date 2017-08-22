@@ -31,3 +31,19 @@ Before running the tests make sure you are serving the app via `ng serve`.
 Commits pushed to this remote will trigger an automated deployment at cloud.docker.com.  [Watchtower](https://github.com/v2tec/watchtower) is installed on my server and pulls down new docker images when necessary. 
 
 
+If you want to run image on your local machine you can change into root directory and:
+
+```
+$ docker build -f Dockerfile -t imbrad .
+```
+
+
+Then start the container.
+
+```
+$ docker rm -fv imbrad; docker run -d \
+--name=imbrad \
+-p 80:80 \
+-p 443:443 \
+imbrad/latest
+```
