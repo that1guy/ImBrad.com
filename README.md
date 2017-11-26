@@ -54,9 +54,9 @@ You can also start the container in conjunction with [nginx-proxy container](htt
 docker rm -fv imbrad; docker run -d \
 --name=imbrad \
 -e VIRTUAL_PORT=32400 \
--e VIRTUAL_HOST=imbrad.com \
--e LETSENCRYPT_HOST=imbrad.com \
--e LETSENCRYPT_EMAIL=myemail@@gmail.com \
+-e VIRTUAL_HOST=imbrad.com,*.imbrad.com \
+-e LETSENCRYPT_HOST=imbrad.com,*.imbrad.com \
+-e LETSENCRYPT_EMAIL=myemail@email.com \
 -e HTTPS_METHOD=noredirect \
 -p 1234:80 \
 imbrad
