@@ -45,5 +45,20 @@ $ docker rm -fv imbrad; docker run -d \
 --name=imbrad \
 -p 80:80 \
 -p 443:443 \
-imbrad/latest
+imbrad
 ```
+
+You can also start the container in conjunction with [nginx-proxy container](https://github.com/jwilder/nginx-proxy) and the companion [lets-encrypt container](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion) 
+
+```
+docker rm -fv imbrad; docker run -d \
+--name=imbrad \
+-e VIRTUAL_PORT=32400 \
+-e VIRTUAL_HOST=imbrad.com \
+-e LETSENCRYPT_HOST=imbrad.com \
+-e LETSENCRYPT_EMAIL=myemail@@gmail.com \
+-e HTTPS_METHOD=noredirect \
+-p 1234:80 \
+imbrad
+```
+
