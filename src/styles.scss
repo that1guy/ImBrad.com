@@ -17,7 +17,11 @@ body > * * {
   background: #fff949;
 }
 
-
+h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Unica One', sans-serif;
+}
 
 
 article h2 {
@@ -26,10 +30,23 @@ article h2 {
   font-family: 'Unica One', sans-serif;
 }
 
+h4 {
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 28px;
+}
+
 article h4 {
   color: #fff;
   font-family: 'Josefin Sans', sans-serif;
   line-height: 28px;
+}
+
+h6 {
+  color: #000;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
 }
 
 article h6 {
