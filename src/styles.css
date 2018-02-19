@@ -78,6 +78,18 @@ article a:hover::after {
 #fp-nav ul li:hover a.active span {
   background-color: #fff; }
 
+.fp-slidesNav {
+  z-index: 400; }
+
+.fp-slidesNav ul li a span {
+  background-color: #a1dbb2; }
+
+.fp-slidesNav ul li a.active span {
+  background-color: #a1dbb2; }
+
+.fp-slidesNav ul li:hover a.active span {
+  background-color: #fff; }
+
 .slimScrollBar {
   display: none !important; }
 

@@ -302,9 +302,9 @@ export class AppComponent {
 
 
 
-  // constructor(public fullpageService: MnFullpageService) {
-  //
-  // }
+  constructor(public fullpageService: MnFullpageService) {
+
+  }
 
   // ngOnInit() {
   //   alert("okay");
