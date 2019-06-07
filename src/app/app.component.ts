@@ -263,11 +263,13 @@ export class AppComponent {
   visible: {
     hello: string,
     work: string,
+    resume: string,
     folio: string,
     contact: string
   } = {
     hello: null,
     work: null,
+    resume: null,
     folio: null,
     contact: null
   };

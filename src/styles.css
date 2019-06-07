@@ -93,4 +93,9 @@ article a:hover::after {
 .slimScrollBar {
   display: none !important; }
 
+.iframe-responsive-resume {
+  width: 80vw;
+  height: 80vh;
+  border: 0; }
+
 /*# sourceMappingURL=styles.css.map */

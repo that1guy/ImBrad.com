@@ -14,6 +14,9 @@
       <li data-menuanchor="work" class="">
         <a href="#work" (click)="nav_open();"><span>work</span></a>
       </li>
+      <li data-menuanchor="resume" class="">
+        <a href="#resume" (click)="nav_open();"><span>résumé</span></a>
+      </li>
       <li data-menuanchor="folio" class="">
         <a href="#folio" (click)="nav_open();"><span>folio</span></a>
       </li>
@@ -56,13 +59,13 @@
 
         <article [className]="visible.hello">
           <h2>
-            My name is Brad Davis, I'm a technical product manager, entrepreneur, software engineer.  My passion is working with teams of developers, designers, and subject matter experts to create products that streamline complex industries.
+            My name is Brad Davis, I'm a Technical Product Manager, Entrepreneur, and Sr. Full Stack JS developer.  My passion is working with teams of developers, designers, and subject matter experts to create products that streamline complex industries.
           </h2>
         </article>
 
         <article [className]="visible.hello">
           <h4>
-            I live in Portland, Oregon and have fun working at <a href="https://boxmls.com" target="_blank">BoxMLS.com</a> where I have the pleasure of building innovative technology for the real estate industry.  You can download my <a href="https://drive.google.com/file/d/1Va5BNrBaGH-SqxhtyAeS4-JufhIk8dbL/view" target="_blank">resume</a> if you'd like to.
+            I live in Portland, Oregon and have fun working at <a href="https://boxmls.com" target="_blank">BoxMLS.com</a> where I have the pleasure of building innovative technology for the real estate industry.  You can download my <a href="#resume">résumé</a> if you'd like to.
           </h4>
         </article>
 
@@ -93,7 +96,7 @@
 
         <article [className]="visible.work">
           <h4>
-            My career started right out of high school as an IT Admin, then an "Apple Genius", then a Google Apps Deployment Engineer, then Google Apps Solutions Architect, and finally a startup founder and Technical Product Manager.
+            My career started right out of high school as an IT Admin, then an "Apple Genius", then a Google Apps Deployment Engineer, then Google Apps Solutions Architect & consultant, and finally a two-time startup founder and Technical Product Manager.
           </h4>
         </article>
 
@@ -104,6 +107,28 @@
   </div>
 
 
+  <!--Embedded Résumé page-->
+  <div class="section fp-section fp-table" data-anchor="resume">
+    <div id="resume-page" class="fp-tableCell section-flex">
+
+      <section>
+        <article [className]="visible.resume">
+          <h6>
+            Résumé_
+          </h6>
+        </article>
+
+        <article [className]="visible.resume">
+          <div class="dropshadow">
+            <iframe src="https://drive.google.com/file/d/1Va5BNrBaGH-SqxhtyAeS4-JufhIk8dbL/preview" class="iframe-responsive-resume"></iframe>
+          </div>
+        </article>
+
+        <!--<button (click)="fullpageService.moveSectionUp();">Move section up</button>-->
+      </section>
+
+    </div>
+  </div>
 
 
   <!--Portfoio Page-->
