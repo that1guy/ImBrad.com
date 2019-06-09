@@ -16,7 +16,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 80%, transparent 80%, rgba(0, 0, 0, 0.4) 100%) repeat;
+  background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 80%, transparent 80%, rgba(0, 0, 0, 0.6) 100%) repeat;
   z-index: 1; }
 
 #particles {
@@ -223,6 +223,17 @@ i:hover {
   width: 90%;
   height: 90%;
   margin: auto; }
+
+.iframe-responsive-resume {
+  border: 0; }
+  @media all and (max-width: 767px) {
+    .iframe-responsive-resume {
+      width: 80vw;
+      height: 60vh; } }
+  @media all and (min-width: 768px) {
+    .iframe-responsive-resume {
+      width: 80vw;
+      height: 90vh; } }
 
 .dropshadow {
   -webkit-filter: drop-shadow(5px 5px 5px #222);
