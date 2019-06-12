@@ -267,7 +267,7 @@ i:hover {
   opacity: 1; }
 
 #hello-page article:first-child.viewable {
-  transition: all .4s ease-in-out 0s; }
+  transition: all .2s ease-in-out 0s; }
 
 #hello-page article:nth-child(2).viewable {
   transition: all .5s ease-in-out 0s; }
@@ -295,7 +295,7 @@ i:hover {
   transform: translate(0, 0); }
 
 #work-page article.viewable:first-child {
-  transition: all .4s ease-in-out 0s; }
+  transition: all .2s ease-in-out 0s; }
 
 #work-page article:nth-child(2),
 #work-page article:nth-child(3),
@@ -313,7 +313,7 @@ i:hover {
   opacity: 1; }
 
 #folio-page article:first-child.viewable {
-  transition: all .4s ease-in-out 0s; }
+  transition: all .2s ease-in-out 0s; }
 
 #folio-page article:nth-child(2).viewable,
 #folio-page article:nth-child(3).viewable {
@@ -336,7 +336,7 @@ i:hover {
   opacity: 1; }
 
 #contact-page article:first-child.viewable {
-  transition: all .4s ease-in-out 0s; }
+  transition: all .2s ease-in-out 0s; }
 
 #contact-page article:nth-child(2).viewable,
 #contact-page article:nth-child(3).viewable {

@@ -308,15 +308,5 @@ export class AppComponent {
 
   }
 
-  // ngOnInit() {
-  //   alert("okay");
-  // }
-
-
-  // @Output() public options: MnFullpageOptions = new MnFullpageOptions({
-  //   afterSlideLoad: function(){
-  //     console.log("Nice");
-  //   }
-  // });
 
 }
