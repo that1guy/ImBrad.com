@@ -17,5 +17,5 @@ jobs:
     - name: Build the Docker image
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "that1guy" --password-stdin
-        docker build . --file Dockerfile --tag imbrad:latest
-        docker push imbrad:latest
+        docker build . --file Dockerfile --tag that1guy/imbrad:latest
+        docker push that1guy/imbrad:latest
