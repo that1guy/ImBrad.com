@@ -18,4 +18,4 @@ jobs:
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "that1guy" --password-stdin
         docker build . --file Dockerfile --tag imbrad:latest
-        docker push that1guy/imbrad:latest
+        docker push imbrad:latest
